@@ -4,7 +4,7 @@ body {
   background-color: #f2f2f2;
   margin: 0;
   padding: 0;
-  text-align: center; /* توسيط كل النصوص */
+  text-align: center;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
 .reviews {
   display: flex;
   flex-direction: column;
-  align-items: center; /* توسيط التعليقات في المنتصف */
+  align-items: center;
   gap: 20px;
   padding: 20px;
 }
@@ -27,9 +27,9 @@ header {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 80%; /* عرض مناسب يخلّيها في المنتصف */
-  max-width: 600px; /* يمنعها تكبر زيادة */
-  text-align: right; /* النص داخل التعليق يكون مضبوط */
+  width: 80%;
+  max-width: 600px;
+  text-align: right;
 }
 
 .review img {
@@ -37,11 +37,53 @@ header {
   height: 60px;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 10px auto; /* الصورة في المنتصف */
+  margin: 0 auto 10px auto;
 }
 
 .review p {
   margin: 0;
   color: #333;
   font-size: 16px;
+}
+
+.add-review {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.add-review h2 {
+  color: #005f73;
+  margin-bottom: 15px;
+}
+
+.add-review form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-review input,
+.add-review textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.add-review button {
+  background-color: #0a9396;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-review button:hover {
+  background-color: #007f86;
 }

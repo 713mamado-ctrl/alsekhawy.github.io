@@ -1,23 +1,47 @@
+body {
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* توسيط كل النصوص */
+}
+
+header {
+  background-color: #005f73;
+  color: white;
+  padding: 20px;
+  border-bottom: 5px solid #0a9396;
+}
+
 .reviews {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* توسيط التعليقات في المنتصف */
+  gap: 20px;
+  padding: 20px;
 }
 
 .review {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* مسافة بين التعليقات */
+  width: 80%; /* عرض مناسب يخلّيها في المنتصف */
+  max-width: 600px; /* يمنعها تكبر زيادة */
+  text-align: right; /* النص داخل التعليق يكون مضبوط */
 }
 
 .review img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: block;
-  margin-bottom: 10px;
+  margin: 0 auto 10px auto; /* الصورة في المنتصف */
 }
 
 .review p {
   margin: 0;
+  color: #333;
+  font-size: 16px;
 }

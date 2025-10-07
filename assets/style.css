@@ -1,89 +1,105 @@
+/* إعداد عام */
 body {
-  direction: rtl;
   font-family: "Cairo", sans-serif;
-  background-color: #f2f2f2;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  direction: rtl;
   text-align: center;
 }
 
+/* الهيدر */
 header {
-  background-color: #005f73;
+  background-color: #0077b6;
   color: white;
-  padding: 20px;
-  border-bottom: 5px solid #0a9396;
+  padding: 20px 0;
+  font-size: 1.5em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* القسم الرئيسي */
+main {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+/* منطقة التعليقات */
 .reviews {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
-  padding: 20px;
 }
 
 .review {
-  background-color: #ffffff;
+  background-color: white;
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: right;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .review img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  margin-bottom: 10px;
   display: block;
-  margin: 0 auto 10px auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .review p {
   margin: 0;
+  line-height: 1.6;
   color: #333;
-  font-size: 16px;
 }
 
-.add-review {
+/* نموذج إضافة تعليق */
+form {
   background-color: #fff;
-  margin: 20px auto;
   padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.add-review h2 {
-  color: #005f73;
-  margin-bottom: 15px;
-}
-
-.add-review form {
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.add-review input,
-.add-review textarea {
+input[type="text"],
+textarea {
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 15px;
+  font-family: "Cairo", sans-serif;
 }
 
-.add-review button {
-  background-color: #0a9396;
+button {
+  background-color: #0077b6;
   color: white;
   border: none;
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease;
 }
 
-.add-review button:hover {
-  background-color: #007f86;
+button:hover {
+  background-color: #005f8a;
+}
+
+/* متجاوبة مع الشاشات الصغيرة */
+@media (max-width: 600px) {
+  main {
+    width: 90%;
+  }
 }
